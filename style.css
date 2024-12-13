@@ -14,3 +14,27 @@ body{
 .mt{
     margin-top: 40px;
 }
+
+body {
+    background-color: blanchedalmond;
+}
+
+#game {
+    display: none;
+}
+
+#play-again-btn {
+    display: none;
+}
+
+
+
+
+    #fun-section {
+        background-color: white; /* Sets the background color to white */
+        color: black; /* Sets the text color to black */
+        border: 2px solid #00FFFF; /* Adds a cyan border */
+        border-radius: 10px; /* Rounded corners */
+        padding: 20px; /* Adds space inside the section */
+    }
+
