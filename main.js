@@ -164,6 +164,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
     playAgainButton.style.display = 'block';
 });
 
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
+    const form = e.target;
 
-
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("✅ Message sent successfully!");
+            form.reset(); // Clear form fields
+        } else {
+            alert("❌ There was a problem sending your message. Please try again.");
+        }
+    })
+    .catch(error => {
+        alert("❌ Network error. Please try again later.");
+    });
+});
